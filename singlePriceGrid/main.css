@@ -20,17 +20,16 @@ ul, li {
   list-style: none;
 }
 .flex-wrapper {
+  box-shadow: 0 6px 10px lightgrey;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid red;
   border-radius: 10px;
-  max-width: 1000px;
+  max-width: 940px;
   margin: 4em auto;
-  padding: 0 1em;
 }
 header {
-  padding: 2.5em 2em;
+  padding: 2.5em;
 }
 header p {
   color: var(--gray-blue);
@@ -48,4 +47,55 @@ h1 {
   font-size: 1.7em;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+section {
+  display: flex;
+  color: var(--light-gray);
+}
+section h3 {
+  font-size: 1.7em;
+  color: #fff;
+  padding-bottom: .5em;
+}
+section p, section ul li {
+  font-size: 1.4em;
+}
+.card-left, .card-right {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 2.5em;
+}
+.card-left {
+  background-color: hsl(179, 62%, 35%);
+  border-radius: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card-right {
+  background-color: var(--cyan);
+  border-radius: 0 0 10px 0;
+}
+.dollar-amount {
+  display: flex;
+  align-items: center;
+  padding-bottom: .3em;
+}
+.dollar-amount_amount {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  margin-right: .5em;
+}
+button {
+  border: none;
+  background-color: var(--light-green);
+  border-radius: 10px;
+  color: var(--light-gray);
+  font-family: inherit;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 1em;
+  width: 100%;
+  margin-top: 2em;
+  cursor: pointer;
 }
