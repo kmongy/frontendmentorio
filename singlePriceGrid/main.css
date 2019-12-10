@@ -91,6 +91,7 @@ button {
   background-color: var(--light-green);
   border-radius: 10px;
   color: var(--light-gray);
+  box-shadow: 0 4px 8px hsl(179, 62%, 20%);
   font-family: inherit;
   font-size: 1.2em;
   font-weight: 700;
@@ -98,4 +99,10 @@ button {
   width: 100%;
   margin-top: 2em;
   cursor: pointer;
+}
+button:hover {
+  background-color: var(--gray-blue);
+}
+footer {
+  text-align: center;
 }
