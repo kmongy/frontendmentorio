@@ -15,6 +15,7 @@ html {
 body {
   font-family: 'Karla', sans-serif;
   font-size: 16px;
+  padding: 0 2em;
 }
 ul, li {
   list-style: none;
@@ -24,6 +25,7 @@ ul, li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   border-radius: 10px;
   max-width: 940px;
   margin: 4em auto;
@@ -50,6 +52,7 @@ h1 {
 }
 section {
   display: flex;
+  flex-wrap: wrap;
   color: var(--light-gray);
 }
 section h3 {
@@ -105,4 +108,17 @@ button:hover {
 }
 footer {
   text-align: center;
+  padding: 1em;
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 .5em;
+    font-size: .9em;
+  }
+  section {
+    flex-direction: column;
+  }
+  .card-left {
+    border-radius: 0;
+  }
 }
