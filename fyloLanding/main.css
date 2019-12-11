@@ -67,18 +67,20 @@ nav ul {
 #cta-email {
   border: none;
   border: 1px solid var(--dark-blue);
-  border-radius: 2px;
+  border-radius: 3px;
   font-family: inherit;
-  padding: .8em;
+  padding: 1em;
   width: 340px;
 }
 .cta-email-btn {
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
   background-color: var(--bright-blue);
   color: #fff;
-  font-family: inherit;
+  font-family: 'Raleway', sans-serif;
+  font-size: .9em;
+  font-weight: 700;
   margin-left: 1em;
-  padding: .9em;
+  padding: 1em;
   width: 200px;
 }
