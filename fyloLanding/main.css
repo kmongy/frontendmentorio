@@ -25,7 +25,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 header {
-  padding: 3em;
+  padding: 4em 4em 0 4em;
 }
 nav {
   display: flex;
@@ -35,4 +35,50 @@ nav ul {
   display: flex;
   justify-content: space-between;
   width: 20%;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4em;
+}
+.hero_text {
+  color: var(--dark-blue);
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.hero_text h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: .5em;
+}
+.hero_text p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.hero_img {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.hero_img img {
+  width: 80%;
+  margin-left: 7em;
+}
+#cta-email {
+  border: none;
+  border: 1px solid var(--dark-blue);
+  border-radius: 2px;
+  font-family: inherit;
+  padding: .8em;
+  width: 340px;
+}
+.cta-email-btn {
+  border: none;
+  border-radius: 2px;
+  background-color: var(--bright-blue);
+  color: #fff;
+  font-family: inherit;
+  margin-left: 1em;
+  padding: .9em;
+  width: 200px;
 }
