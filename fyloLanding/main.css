@@ -24,7 +24,7 @@ a {
 h2 {
   color: var(--dark-blue);
   font-family: 'Raleway', sans-serif;
-  font-size: 2.5em;
+  font-size: 2.4em;
   margin-bottom: .5em;
   line-height: 1.3em;
 }
@@ -65,7 +65,7 @@ nav ul {
 }
 .hero_img img,
 .how-to-img img {
-  width: 80%;
+  width: 85%;
   margin-left: 7em;
 }
 #cta-email {
@@ -87,6 +87,10 @@ nav ul {
   margin-left: 1em;
   padding: 1em;
   width: 200px;
+  cursor: pointer;
+}
+.cta-email-btn:hover {
+  background-color: var(--dark-blue);
 }
 .how-to-container {
   background: url(./images/bg-curve-desktop.svg) center;
@@ -95,40 +99,47 @@ nav ul {
 .how-to-flex-container {
   display: flex;
   justify-content: space-between;
-  padding: 10em 4em 4em 4em;
-}
-.fylo-link {
-  display: flex;
   align-items: center;
-}
-.fylo-link a,
-.fylo-link img {
-  color: var(--cyan);
-  border-bottom: 1px solid var(--cyan);
+  padding: 8em 4em;
 }
 .fylo-link a {
-  padding: .12em;
+  color: var(--cyan);
+  padding: .3em;
+  border-bottom: 1px solid var(--cyan);
 }
-.fylo-link img {
-  width: 4%;
+.fylo-link  img {
+  margin-bottom: -.1em;
 }
 .how-to-testimonial {
   background-color: white;
   border-radius: 8px;
   box-shadow: 1px 2px 8px lightgrey;
   margin-top: 4em;
-  padding: 2.5em;
-  font-size: .9em;
+  padding: 2em;
+  font-size: .8em;
+  letter-spacing: 1px;
+  line-height: 2em;
   width: 440px;
 }
-.how-to-testimonial img {
-  width: 8%;
+.how-to-testimonial p {
+  font-size: 1.2em;
 }
 .testimonial-flex-cont {
   display: flex;
-  justify-content: start;
+  align-items: center;
 }
 #testimonial-avatar {
-  width: 10%;
   border-radius: 50%;
+  width: 60px;
+}
+#avatar-name {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 0 1em;
+  letter-spacing: 0;
+}
+#avatar-text {
+  font-size: 1em;
+  margin: 0 0 0 1.5em;
+  letter-spacing: 0;
 }
