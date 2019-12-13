@@ -192,8 +192,6 @@ nav ul {
   margin-left: 0;
 }
 footer {
-  display: flex;
-  justify-content: space-between;
   background-color: var(--dark-blue);
   color: var(--light-gray);
   padding: 5em 4em;
@@ -201,8 +199,13 @@ footer {
 footer p {
   color: var(--light-gray);
 }
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
 #contact-logo {
   filter: invert(1) sepia(1) saturate(3) hue-rotate(180deg);
+  margin-bottom: 1em;
 }
 .contact-social-media {
   display: flex;
