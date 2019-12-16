@@ -286,6 +286,25 @@ footer p {
   .sign-up-btn {
     margin-bottom: 6em;
   }
+  footer {
+    padding: 1em;
+  }
+  #contact-logo {
+    margin-top: 4em;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .contact1,
+  .contact2,
+  .contact3 {
+    margin: 2em 0;
+  }
+  .contact-social-media {
+    justify-content: center;
+    margin-bottom: 4em;
+  }
 }
 @media screen and (max-width: 400px) {
   header {
