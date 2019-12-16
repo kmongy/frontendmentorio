@@ -238,22 +238,53 @@ footer p {
   }
 }
 @media screen and (max-width: 800px) {
+  nav ul {
+    align-items: center;
+    width: 40%;
+  }
   .hero {
     flex-direction: column-reverse;
   }
-  .hero_img img {
+  .hero_img img,
+  .how-to-img img {
     margin-left: 0;
     width: 100%;
   }
   .hero_text {
     width: 100%;
     flex-wrap: wrap;
+    text-align: center;
   }
   #cta-email {
-    width: 100%;
+    width: 70%;
   }
   .cta-email-btn {
+    width: 70%;
+  }
+  .how-to-flex-container {
+    flex-direction: column-reverse;
+  }
+  .sign-up-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
+    padding: 1em;
+    text-align: center;
+  }
+  .sign-up-input {
+    padding: 0;
+    width: 100%;
+  }
+  .sign-up-text {
+    margin-bottom: 2em;
+  }
+  #sign-up,
+  .sign-up-btn {
+    width: 100%;
+  }
+  .sign-up-btn {
+    margin-bottom: 6em;
   }
 }
 @media screen and (max-width: 400px) {
@@ -268,17 +299,57 @@ footer p {
     font-size: .9em;
     width: 50%;
   }
+  p {
+    line-height: 1.5em;
+  }
   .hero {
     width: 100%;
-    padding: 1em;
+    padding: 1.5em;
     margin-top: 4em;
   }
-  .hero_text  {
-    text-align: center;
-    font-size: .8em;
+  .hero_text p{
+    font-size: .9em;
+    margin-bottom: 2em;
+  }
+  .hero_text h2 {
+    font-size: 1.5em;
+  }
+  #cta-email {
+    width: 100%;
+  }
+  .cta-email-btn {
+    width: 100%;
   }
   .cta-email-btn {
     padding: .9em;
-    font-size: 1.3em;
+    font-size: 1em;
+  }
+  .how-to-container {
+    width: 100%;
+  }
+  .how-to-flex-container {
+    padding: 1em;
+    width: 100%;
+  }
+  .how-to_text {
+    width: 100%;
+  }
+  .how-to_text  h2 {
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  .how-to_text p {
+    font-size: 1em;
+  }
+  .how-to-img img {
+    margin: 4em 0;
+  }
+  .fylo-link {
+    text-align: center;
+  }
+  .how-to-testimonial {
+    width: 100%;
+    margin-bottom: 8em;
   }
 }
