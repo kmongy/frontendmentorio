@@ -56,6 +56,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 4em;
   margin-bottom: 4em;
 }
@@ -225,4 +226,59 @@ footer p {
 .below-footer {
   text-align: center;
   font-size: .6em;
+}
+@media screen and (max-width: 1255px) {
+  #cta-email {
+    width: 70%;
+  }
+  .cta-email-btn {
+    flex-wrap: wrap;
+    margin: 1em 0;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero_img img {
+    margin-left: 0;
+    width: 100%;
+  }
+  .hero_text {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #cta-email {
+    width: 100%;
+  }
+  .cta-email-btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  header {
+    padding: 1em;
+  }
+  nav img {
+    width: 30%;
+  }
+  nav ul {
+    align-items: center;
+    font-size: .9em;
+    width: 50%;
+  }
+  .hero {
+    width: 100%;
+    padding: 1em;
+    margin-top: 4em;
+  }
+  .hero_text  {
+    text-align: center;
+    font-size: .8em;
+  }
+  .cta-email-btn {
+    padding: .9em;
+    font-size: 1.3em;
+  }
 }
