@@ -17,7 +17,41 @@ body {
   background: 
     url(./images/bg-top.svg) top right no-repeat,
     url(./images/bg-bottom.svg) bottom left no-repeat;
+  background-color: var(--light-grey-blue);
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
+  text-align: center;
+}
+header h2 {
+  padding: 2em 0 1em 0;
+  color: var(--grey);
+  font-size: 2em;
+}
+.pricing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+#toggle-annually,
+#toggle-monthly {
+  color: var(--grey-blue);
+  font-weight: 700;
+  padding: 0 1em;
+}
+#toggle {
+  background: var(--primary-color);
+  border: 0;
+  border-radius: 40px;
+  color: var(--primary-color);
+  width: 55px;
+  height: 30px;
+}
+.toggle-circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  margin: .25em .3em;
+  background-color: var(--light-grey-blue);
 }
