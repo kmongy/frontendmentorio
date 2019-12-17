@@ -1,0 +1,16 @@
+:root {
+  --primary-color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+html {
+  box-sizing: border-box;
+}
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(./images/bg-top.svg) top right no-repeat,
+              url(./images/bg-bottom.svg) bottom left no-repeat;
+  height: 100vh;
+}
