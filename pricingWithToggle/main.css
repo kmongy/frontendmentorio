@@ -74,13 +74,10 @@ header h2 {
   transition: .4s;
 }
 input:checked + .slide {
-  background: red;
+  background: var(--primary-color);
 }
-input:focus + .slide {
-  box-shadow: 0 0 10px black;
-}
-input:checked + .slide:before {
-  transform: translateX(20px);
+input:checked + .slide::before {
+  transform: translateX(24px);
 }
 .pricing-table-container {
   display: flex;
