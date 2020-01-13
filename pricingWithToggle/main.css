@@ -84,13 +84,15 @@ input:checked + .slide::before {
   justify-content: center;
   align-items: center;
   margin-bottom: 10em;
+  flex-wrap: wrap;
 }
 .pricing {
   background-color: #fff;
   box-shadow: 1px 4px 10px lightgrey;
   color: var(--dark-grey);
   padding: 2em;
-  width: 275px;
+  width: 300px;
+  margin: 2em 0;
 }
 .pricing-tier {
   font-weight: 700;
@@ -136,4 +138,10 @@ input:checked + .slide::before {
 #professional button {
   background: var(--light-grey-blue);
   color: hsl(237, 63%, 64%);
+}
+@media screen and (max-width: 400px) {
+  #basic,
+  #master {
+    border-radius: 8px;
+  }
 }
