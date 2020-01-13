@@ -90,6 +90,7 @@ input:checked + .slide::before {
   box-shadow: 1px 4px 10px lightgrey;
   color: var(--dark-grey);
   padding: 2em;
+  width: 275px;
 }
 .pricing-tier {
   font-weight: 700;
