@@ -1,5 +1,11 @@
 $font-headings: 'Barlow Condensed', sans-serif;
 $font-regular: 'Barlow', sans-serif;
+$font-size: 18px;
+$primary-red: hsl(0, 100%, 68%);
+$dark-blue: hsl(230, 29%, 20%);
+$grey-blue: hsl(230, 11%, 40%);
+$grey: hsl(231, 7%, 65%);
+$light-grey: hsl(207, 33%, 95%);
 
 html {
   box-sizing: border-box;
@@ -11,4 +17,40 @@ html {
 }
 body {
   font-family: $font-regular;
+  font-size: $font-size;
+}
+header {
+  width: 80%;
+  margin: 4em auto;
+  font-family: $font-headings;
+  letter-spacing: 1px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  a {
+    color: $dark-blue;
+    text-decoration: none;
+  }
+  li {
+    padding: 0 1em;
+    font-weight: 700;
+  }
+  .nav-separate {
+    border: $light-grey;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color:$grey;
+  }
+  .nav-login {
+    color: $grey;
+  }
 }

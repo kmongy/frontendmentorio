@@ -10,6 +10,44 @@ html {
 
 body {
   font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+
+header {
+  width: 80%;
+  margin: 4em auto;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+nav a {
+  color: #242942;
+  text-decoration: none;
+}
+nav li {
+  padding: 0 1em;
+  font-weight: 700;
+}
+nav .nav-separate {
+  border: #eef3f6;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #a0a1ac;
+}
+nav .nav-login {
+  color: #a0a1ac;
 }
 
 /*# sourceMappingURL=styles.css.map */
