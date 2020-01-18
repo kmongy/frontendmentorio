@@ -80,4 +80,31 @@ nav .nav-login {
   width: 700px;
 }
 
+.hero-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #a0a1ac;
+}
+.hero-title span {
+  background-color: #242942;
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  font-size: 0.8em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-right: 1em;
+}
+
+.hero-blurb {
+  color: #242942;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=styles.css.map */

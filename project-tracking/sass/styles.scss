@@ -80,3 +80,28 @@ nav {
 .hero-cta-imgs {
   width: 700px;
 }
+.hero-title {
+  font-family: $font-headings;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: $grey;
+  span {
+    background-color: $dark-blue;
+    color: white;
+    padding: .2em .6em;
+    border-radius: 30px;
+    font-size: .8em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-right: 1em;
+  }
+}
+.hero-blurb {
+  color: $dark-blue;
+  font-family: $font-headings;
+  font-size: 4em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
