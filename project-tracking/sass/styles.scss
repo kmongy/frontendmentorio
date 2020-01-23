@@ -145,3 +145,16 @@ nav {
   letter-spacing: 4px;
   margin-left: 1em;
 }
+.attribution {
+  text-align: center;
+}
+@media screen and (max-width: 400px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  header {
+    grid-column: 1/6;
+    grid-row: 1;
+  }
+}
