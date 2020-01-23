@@ -78,12 +78,21 @@ nav {
   align-self: center;
   display: flex;
 }
+.hero-cta-wrapper {
+  flex-basis: 0;
+  flex-grow: 1;
+}
 .hero-cta-imgs {
   width: 700px;
+  padding-left: 1em;
+  overflow: hidden;
+  img {
+    overflow: hidden;
+  }
 }
 .hero-title {
   font-family: $font-headings;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -106,7 +115,6 @@ nav {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: .3em;
-  width: 90%;
   line-height: 1;
 }
 .hero-product-description {

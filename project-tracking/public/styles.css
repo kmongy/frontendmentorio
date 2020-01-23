@@ -77,13 +77,23 @@ nav .nav-login {
   display: flex;
 }
 
+.hero-cta-wrapper {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
 .hero-cta-imgs {
   width: 700px;
+  padding-left: 1em;
+  overflow: hidden;
+}
+.hero-cta-imgs img {
+  overflow: hidden;
 }
 
 .hero-title {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -107,7 +117,6 @@ nav .nav-login {
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0.3em;
-  width: 90%;
   line-height: 1;
 }
 
