@@ -56,6 +56,9 @@ nav {
   a {
     color: $dark-blue;
     text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
   }
   li {
     padding: 0 1em;
@@ -85,6 +88,7 @@ nav {
 .hero-cta-imgs {
   width: 700px;
   padding-left: 1em;
+  margin-top: -80px;
   overflow: hidden;
   img {
     overflow: hidden;
@@ -132,6 +136,7 @@ nav {
   font-family: $font-headings;
   font-weight: 700;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 .cta-text {
   color: $grey;

@@ -55,6 +55,9 @@ nav a {
   color: #242942;
   text-decoration: none;
 }
+nav a :hover {
+  text-decoration: underline;
+}
 nav li {
   padding: 0 1em;
   font-weight: 700;
@@ -85,6 +88,7 @@ nav .nav-login {
 .hero-cta-imgs {
   width: 700px;
   padding-left: 1em;
+  margin-top: -80px;
   overflow: hidden;
 }
 .hero-cta-imgs img {
@@ -136,6 +140,7 @@ nav .nav-login {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .cta-text {
