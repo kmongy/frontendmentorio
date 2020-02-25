@@ -20,22 +20,16 @@ body {
   font-size: $font-size;
   position: relative;
 }
-.grid-wrapper {
-  display: grid;
-  grid-template-columns: 150px 1fr 1fr 1fr 1fr 100px;
-  grid-template-rows: 80px 50px auto;
+.wrapper {
   height: 100vh;
 }
 header {
-  grid-column: 2/6;
-  grid-row: 2;
-  align-self: center;
   font-family: $font-headings;
   letter-spacing: 1px;
 }
 .header-background {
   position: absolute;
-  top: -200px;
+  top: -300px;
   right: 0;
   background-color: $light-grey;
   border-radius: 0 0 0 50px;
@@ -48,6 +42,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+  padding: 80px 120px;
   ul {
     display: flex;
     list-style: none;
@@ -76,23 +71,21 @@ nav {
   }
 }
 .hero {
-  grid-column: 2 / 7;
-  grid-row: 3;
-  align-self: center;
   display: flex;
+  justify-content: space-between;
+  padding: 60px 0 60px 120px;
 }
 .hero-cta-wrapper {
   flex-basis: 0;
   flex-grow: 1;
 }
 .hero-cta-imgs {
-  width: 700px;
-  padding-left: 1em;
-  margin-top: -80px;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding-left: 2em;
+  margin-top: -60px;
+  width: 800px;
   overflow: hidden;
-  img {
-    overflow: hidden;
-  }
 }
 .hero-title {
   font-family: $font-headings;
@@ -120,10 +113,11 @@ nav {
   text-transform: uppercase;
   margin-top: .3em;
   line-height: 1;
+  padding-right: 2em;
 }
 .hero-product-description {
   margin: 1em 0 3em 0;
-  width: 50%;
+  width: 45%;
   color: $grey-blue;
 }
 .hero-cta-btn {
@@ -150,7 +144,8 @@ nav {
 }
 @media screen and (max-width: 400px) {
   .grid-wrapper {
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction: column;
   }
   header {
     grid-column: 1/6;
