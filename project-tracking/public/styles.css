@@ -150,14 +150,16 @@ nav .nav-login {
 }
 
 @media screen and (max-width: 400px) {
-  .grid-wrapper {
+  .wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  header {
-    grid-column: 1/6;
-    grid-row: 1;
+  nav {
+    padding: 20px;
+  }
+  nav .logo {
+    display: block;
   }
 }
 
