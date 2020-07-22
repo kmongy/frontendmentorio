@@ -36,7 +36,7 @@ header {
   justify-content: space-between;
 
   li {
-    padding-right: 2.8125rem;
+    padding: 0 1.40625rem;
 
     &:last-child {
       padding-right: 0;
@@ -57,7 +57,36 @@ header {
   }
 }
 .hamburger {
-  display: none;
+  // display: none;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+
+  & span {
+    display: block;
+    background: $veryDarkBlue;
+    height: 3px;
+    width: 100%;
+    margin: 2px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  &.open > span:first-child {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background: white;
+    transform: rotate(45deg);
+  }
+  &.open > span:nth-child(2) {
+    opacity: 0;
+  }
+  &.open > span:last-child {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background: white;
+    transform: rotate(135deg);
+  }
 }
 .nav-overlay {
   background: $veryDarkBlue;
@@ -70,7 +99,7 @@ header {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease-in;
+  transition: all 0.3s ease-in;
   z-index: -10;
 
   &.open {
@@ -79,7 +108,7 @@ header {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 53.75rem) {
   .nav {
     padding: 2.125rem 1.6875rem;
   }
