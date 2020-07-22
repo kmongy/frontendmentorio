@@ -8,3 +8,44 @@ html {
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 100%;
+  color: $veryDarkBlue;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.125rem 1.6875rem;
+}
+.nav__logo {
+  width: 8.4375rem;
+
+  & img {
+    width: 100%;
+  }
+}
+.nav__links {
+  display: none;
+  justify-content: space-between;
+}
+.hamburger {
+  background: none;
+  border: none;
+  width: 1.1875rem;
+  height: 1rem;
+
+  & img {
+    height: 100%;
+    width: 100%;
+  }
+}
