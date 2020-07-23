@@ -276,7 +276,7 @@ header {
       background: transparent;
       border: none;
       border-top: 1px solid $grayishBlue;
-      color: $veryDarkBlue;
+      color: $grayishBlue;
       font-family: inherit;
       font-size: 1rem;
       padding: 1rem 0;
@@ -288,14 +288,19 @@ header {
       }
     }
 
-    & button[aria-selected='true'] .active {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 30%;
-      background: $softRed;
-      width: 40%;
-      height: 0.25rem;
+    & button[aria-selected='true'] {
+      color: $veryDarkBlue;
+      font-weight: 500;
+
+      & .active {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        background: $softRed;
+        width: 40%;
+        height: 0.25rem;
+      }
     }
   }
 }
@@ -397,6 +402,79 @@ header {
       font-weight: 500;
     }
   }
+  .features {
+    & h2 {
+      font-size: 2rem;
+    }
+    & .features__description {
+      font-size: 1.2rem;
+      width: 40rem;
+      margin: 0 auto;
+    }
+  }
+  .features__tabs .tabs-list-container {
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+
+    & button {
+      border: 0;
+      border-bottom: 1px solid $grayishBlue;
+      width: 100%;
+    }
+    & button[aria-selected='true'] .active {
+      left: 0;
+      width: 100%;
+    }
+  }
+  .active-tab {
+    display: flex;
+
+    & .tab-img-container {
+      width: 100%;
+      padding: 2rem 0 2rem 4rem;
+
+      &::after {
+        top: 4rem;
+        left: -8rem;
+        border-bottom-right-radius: 30%;
+        height: 80%;
+        width: 120%;
+      }
+    }
+  }
+  .tab-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    max-height: 100%;
+
+    & h3 {
+      font-size: 2rem;
+      text-align: left;
+      padding: 0 0 1rem 8rem;
+    }
+
+    & .tab-description {
+      text-align: left;
+      padding-left: 8rem;
+      font-size: 1.1rem;
+    }
+    & .tab-more-info {
+      display: block;
+      font-family: inherit;
+      font-weight: 500;
+      border: none;
+      background: $softBlue;
+      border-radius: 4px;
+      color: white;
+      width: 6.5rem;
+      padding: 0.8rem 0;
+      margin-left: 8rem;
+    }
+  }
 }
 @media screen and (min-width: 90rem) {
   .hero__text-cta {
@@ -413,6 +491,15 @@ header {
     &::after {
       top: 8.5rem;
       left: 10.625rem;
+    }
+  }
+  .active-tab {
+    display: flex;
+    & .tab-img-container {
+      &::after {
+        top: 8rem;
+        left: -12rem;
+      }
     }
   }
 }
