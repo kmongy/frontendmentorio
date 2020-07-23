@@ -12,6 +12,7 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 100%;
   color: $veryDarkBlue;
+  overflow-x: hidden;
 }
 ul,
 li {
@@ -20,6 +21,10 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 header {
   position: relative;
@@ -188,20 +193,18 @@ header {
 }
 .hero__text-cta {
   & h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 2px;
     padding: 0 2.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
   }
 }
 .hero-text {
-  padding: 0 2.5rem;
+  padding: 0 2rem;
   text-align: center;
   color: $grayishBlue;
   line-height: 1.7;
   margin-bottom: 1.5rem;
+  font-size: 0.9rem;
 }
 .hero-cta-btns-container {
   display: flex;
@@ -243,6 +246,64 @@ header {
     }
   }
 }
+.features {
+  margin-top: 7.5rem;
+
+  & h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  & .features__description {
+    color: $grayishBlue;
+    font-size: 0.9rem;
+    padding: 0 2rem;
+    text-align: center;
+    line-height: 1.7;
+    padding-bottom: 4rem;
+  }
+}
+.features__tabs-container {
+  display: flex;
+  justify-content: center;
+}
+.features__tabs {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 0 auto;
+
+  & .tabs-list-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+
+    & button {
+      background: transparent;
+      border: none;
+      border-top: 1px solid $grayishBlue;
+      color: $veryDarkBlue;
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 1rem 0;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      &:last-child {
+        border-bottom: 1px solid $grayishBlue;
+      }
+    }
+
+    & button[aria-selected='true'] .active {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      background: $softRed;
+      width: 40%;
+      height: 0.25rem;
+    }
+  }
+}
 
 @media screen and (max-width: 53.75rem) {
   .nav {
@@ -270,9 +331,6 @@ header {
   }
 }
 @media screen and (min-width: 53.76rem) {
-  body {
-    overflow-x: hidden;
-  }
   header {
     padding-bottom: 4rem;
   }
