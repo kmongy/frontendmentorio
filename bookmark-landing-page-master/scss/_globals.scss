@@ -22,9 +22,18 @@ a {
   text-decoration: none;
   color: inherit;
 }
-h2 {
+h2,
+h3 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+p {
+  padding: 0 2rem;
+  text-align: center;
+  color: $grayishBlue;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
 }
 header {
   position: relative;
@@ -198,14 +207,7 @@ header {
     text-align: center;
   }
 }
-.hero-text {
-  padding: 0 2rem;
-  text-align: center;
-  color: $grayishBlue;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
+
 .hero-cta-btns-container {
   display: flex;
   justify-content: center;
@@ -253,18 +255,11 @@ header {
     text-align: center;
     padding-bottom: 1rem;
   }
-  & .features__description {
-    color: $grayishBlue;
-    font-size: 0.9rem;
-    padding: 0 2rem;
-    text-align: center;
-    line-height: 1.7;
-    padding-bottom: 4rem;
-  }
 }
 .features__tabs-container {
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 .features__tabs {
   display: flex;
@@ -302,6 +297,37 @@ header {
       width: 40%;
       height: 0.25rem;
     }
+  }
+}
+.tab-img-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 4.75rem;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 2.2rem;
+    left: -4rem;
+    background: $softBlue;
+    border-bottom-right-radius: 40%;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+.tab-panel-container {
+  text-align: center;
+
+  & h3 {
+    padding-bottom: 1rem;
+  }
+  & .tab-more-info {
+    display: none;
   }
 }
 
