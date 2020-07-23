@@ -216,17 +216,30 @@ header {
     padding: 0.75rem 0.8125rem;
     margin: 0 0.5rem;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
     &.chrome {
       background: $softBlue;
+      border: 2px solid $softBlue;
       border-radius: 8px;
       color: white;
       margin-left: 0;
+      &:hover {
+        background: transparent;
+        border: 2px solid $softBlue;
+        color: $softBlue;
+      }
     }
     &.firefox {
+      border: 2px solid white;
       box-shadow: 4px 4px 10px lightgrey;
       border-radius: 8px;
       color: $veryDarkBlue;
+      &:hover {
+        background: transparent;
+        border: 2px solid $veryDarkBlue;
+        color: $veryDarkBlue;
+      }
     }
   }
 }
