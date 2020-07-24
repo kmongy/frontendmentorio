@@ -428,9 +428,8 @@ header {
       width: 100%;
     }
   }
-  .active-tab {
+  .tab-panel-container {
     display: flex;
-
     & .tab-img-container {
       width: 100%;
       padding: 2rem 0 2rem 4rem;
@@ -493,8 +492,7 @@ header {
       left: 10.625rem;
     }
   }
-  .active-tab {
-    display: flex;
+  .tab-panel-container {
     & .tab-img-container {
       &::after {
         top: 8rem;
