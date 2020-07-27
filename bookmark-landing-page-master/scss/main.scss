@@ -30,7 +30,7 @@ NAVIGATION
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.75rem;
-    transition: all 0.3s ease-in-out;
+    transition: $transitionAnimation;
 
     &:hover {
       color: $softRed;
@@ -102,7 +102,7 @@ NAVIGATION
     height: 3px;
     width: 100%;
     margin: 2px 0;
-    transition: all 0.3s ease-in-out;
+    transition: $transitionAnimation;
   }
   &.open > span:first-child {
     position: absolute;
@@ -133,7 +133,7 @@ NAVIGATION
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: all 0.3s ease-in;
+  transition: $transitionAnimation;
   z-index: -10;
 
   &.open {
@@ -193,7 +193,7 @@ HERO
     padding: 0.75rem 0.8125rem;
     margin: 0 0.5rem;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: $transitionAnimation;
 
     &.chrome {
       background: $softBlue;
@@ -226,7 +226,7 @@ FEATURES
 ----------
 */
 .features {
-  margin: 7.5rem 0;
+  margin: 7.5rem 0 6rem 0;
 
   & h2 {
     text-align: center;
@@ -260,8 +260,14 @@ FEATURES
       cursor: pointer;
       outline: none;
       position: relative;
+
       &:last-child {
         border-bottom: 1px solid $grayishBlue;
+      }
+
+      &:hover {
+        color: $softRed;
+        transition: $transitionAnimation;
       }
     }
 
@@ -341,10 +347,13 @@ EXTENSION
     }
   }
 }
-.extension__grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 4rem;
+.extension__flex-container {
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0 2rem;
 
   .extension {
@@ -353,6 +362,7 @@ EXTENSION
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 8px 12px lightgrey;
+    margin-bottom: 2rem;
 
     .extension-img-container {
       margin: 1rem 0;
@@ -373,12 +383,12 @@ EXTENSION
     background-position: top;
     background-size: 1.3rem 0.25rem;
     background-repeat: repeat-x;
-    padding: 2rem 0;
-    width: 100%;
+    padding: 2rem 1rem;
 
     .extension-btn {
       background: $softBlue;
       border: none;
+      border: 2px solid $softBlue;
       border-radius: 4px;
       color: white;
       font-family: inherit;
@@ -386,9 +396,21 @@ EXTENSION
       font-weight: 500;
       padding: 0.75rem 2.5rem;
       cursor: pointer;
+      transition: $transitionAnimation;
+
+      &:hover {
+        background: transparent;
+        border: 2px solid $softBlue;
+        color: $softBlue;
+      }
     }
   }
 }
+/*
+----------
+MEDIA QUERIES
+----------
+*/
 @media screen and (max-width: 53.75rem) {
   .nav {
     padding: 2.125rem 1.6875rem;
@@ -530,14 +552,29 @@ EXTENSION
       font-family: inherit;
       font-weight: 500;
       border: none;
+      border: 2px solid $softBlue;
       background: $softBlue;
       border-radius: 4px;
       color: white;
       width: 6.5rem;
       padding: 0.8rem 0;
       margin-left: 8rem;
+      transition: $transitionAnimation;
       cursor: pointer;
+
+      &:hover {
+        background: transparent;
+        border: 2px solid $softBlue;
+        color: $softBlue;
+      }
     }
+  }
+  .extension__flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -578,9 +615,20 @@ EXTENSION
       left: -20rem;
     }
   }
-  .extension__grid-container {
+  .extension__flex-container {
+    flex-wrap: nowrap;
     width: 65%;
-    margin: 0 auto;
-    gap: 2rem;
+    position: relative;
+
+    & .extension:nth-child(2) {
+      position: absolute;
+      top: 2rem;
+      left: 20.5rem;
+    }
+    & .extension:last-child {
+      position: absolute;
+      top: 4rem;
+      left: 39rem;
+    }
   }
 }
