@@ -325,6 +325,18 @@ header {
     width: 100%;
   }
 }
+#speedy {
+  &::after {
+    height: 70%;
+    top: 7.5rem;
+  }
+}
+#easy {
+  &::after {
+    height: 80%;
+    top: 5.5rem;
+  }
+}
 .tab-panel-container {
   text-align: center;
 
@@ -441,6 +453,17 @@ header {
         height: 80%;
         width: 120%;
       }
+    }
+  }
+  #speedy {
+    &::after {
+      top: 6rem;
+      left: -20rem;
+    }
+  }
+  #easy {
+    &::after {
+      left: -18rem;
     }
   }
   .tab-description-container {
