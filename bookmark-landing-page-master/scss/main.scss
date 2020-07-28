@@ -594,10 +594,64 @@ CONTACT
 
     .contact-btn {
       background: $softRed;
+      border: 2px solid $softRed;
       color: white;
       font-weight: 500;
       margin-bottom: 2rem;
+      transition: $transitionAnimation;
       cursor: pointer;
+
+      &:hover {
+        background: white;
+        color: $softRed;
+      }
+    }
+  }
+}
+/*
+----------
+FOOTER
+----------
+*/
+footer {
+  background: $veryDarkBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  .footer__nav {
+    color: $grayishBlue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 2rem 0;
+
+    li {
+      padding: 1rem 0;
+      transition: $transitionAnimation;
+
+      &:hover {
+        color: $softRed;
+      }
+    }
+  }
+
+  .footer__social-media {
+    display: flex;
+    align-items: center;
+
+    .media {
+      margin: 0 1rem;
+
+      &:hover {
+        .media-svg {
+          transition: $transitionAnimation;
+          fill: $softRed;
+        }
+      }
     }
   }
 }
@@ -846,6 +900,33 @@ MEDIA QUERIES
         width: 35%;
         max-width: 120px;
       }
+    }
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    .footer-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer__logo {
+      padding-left: 6rem;
+    }
+
+    .footer__nav {
+      padding: 0 0 0 3rem;
+      ul {
+        display: flex;
+
+        li {
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    .footer__social-media {
+      padding-right: 6rem;
     }
   }
 }
