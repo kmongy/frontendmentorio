@@ -11,6 +11,8 @@ const dropdownItem = document.querySelectorAll('.faq__questions-wrapper');
 const accordionHeading = document.querySelectorAll('.faq__header');
 
 const contactForm = document.querySelector('.contact-form');
+const contactInputs = document.querySelector('.contact__inputs');
+const email = document.querySelector('#email');
 
 function revealHamburgerNav() {
   const overlay = document.querySelector('.nav-overlay');
@@ -52,6 +54,16 @@ function toggleDropdown() {
 
 function handleSubmit(event) {
   event.preventDefault();
+  handleEmail(email);
+}
+
+function handleEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (re.test(email.value.trim())) {
+    contactInputs.classList.remove('error');
+  } else {
+    contactInputs.classList.add('error');
+  }
 }
 
 hamburger.addEventListener('click', revealHamburgerNav);
