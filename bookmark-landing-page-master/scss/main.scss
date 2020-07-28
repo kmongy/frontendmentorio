@@ -458,8 +458,13 @@ FAQ
     }
   }
 
+  &.open .faq__header {
+    border-bottom: none;
+  }
   &.open .faq__dropdown-text {
     max-height: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $grayishBlue;
   }
   &.open .faq__header .faq__dropdown-button {
     transform: rotate(180deg);
@@ -478,6 +483,7 @@ FAQ
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem 1.5rem;
+  margin-top: 1rem;
   cursor: pointer;
   transition: $transitionAnimation;
 
@@ -485,6 +491,69 @@ FAQ
     background: transparent;
     border: 2px solid $softBlue;
     color: $softBlue;
+  }
+}
+/*
+----------
+CONTACT
+----------
+*/
+.contact-container {
+  background: $softBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact__description {
+    color: white;
+    text-align: center;
+
+    p {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.8rem;
+      // font-weight: 500;
+      padding-top: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      padding: 0 1rem 2rem 1rem;
+    }
+  }
+
+  .contact__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+    #email,
+    .contact-btn {
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      font-family: inherit;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      outline: none;
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+
+    .contact-btn {
+      background: $softRed;
+      color: white;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
   }
 }
 /*
