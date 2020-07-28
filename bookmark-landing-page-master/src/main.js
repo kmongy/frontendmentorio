@@ -10,6 +10,8 @@ const featuresTab = document.querySelector('.features__tabs');
 const dropdownItem = document.querySelectorAll('.faq__questions-wrapper');
 const accordionHeading = document.querySelectorAll('.faq__header');
 
+const contactForm = document.querySelector('.contact-form');
+
 function revealHamburgerNav() {
   const overlay = document.querySelector('.nav-overlay');
 
@@ -48,6 +50,10 @@ function toggleDropdown() {
   });
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+}
+
 hamburger.addEventListener('click', revealHamburgerNav);
 tabButtons.forEach((button) =>
   button.addEventListener('click', handleClickTab)
@@ -56,3 +62,5 @@ tabButtons.forEach((button) =>
 accordionHeading.forEach((item) =>
   item.addEventListener('click', toggleDropdown)
 );
+
+contactForm.addEventListener('submit', handleSubmit);

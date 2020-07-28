@@ -258,8 +258,22 @@
         <h3>Stay up-to-date with what we’re doing</h3>
       </div>
       <div class="contact__inputs">
-        <form>
-          <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+        <form class="contact-form">
+          <div class="contact-form-input">
+            <input type="email" name="email" class="error" id="email" placeholder="Enter your email address">
+            <span class="error-message">Whoops, make sure it's an email</span>
+            <span class="error-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <g fill="none" fill-rule="evenodd">
+                  <circle cx="10" cy="10" r="10" fill="#FA5959" />
+                  <g fill="#FFF" transform="translate(9 5)">
+                    <rect width="2" height="7" rx="1" />
+                    <rect width="2" height="2" y="8" rx="1" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </div>
           <button class="contact-btn" type="submit">Contact Us</button>
         </form>
       </div>
