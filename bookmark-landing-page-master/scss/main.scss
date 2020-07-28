@@ -436,6 +436,11 @@ FAQ
       font-weight: 500;
       padding: 0;
       margin: 0;
+      transition: $transitionAnimation;
+
+      &:hover {
+        color: $softRed;
+      }
     }
 
     .faq__dropdown-button {
@@ -458,6 +463,9 @@ FAQ
   }
   &.open .faq__header .faq__dropdown-button {
     transform: rotate(180deg);
+  }
+  &.open .faq__dropdown-button .arrow-svg {
+    stroke: $softRed;
   }
 }
 .faq-button {
@@ -679,14 +687,17 @@ MEDIA QUERIES
   .faq__questions-wrapper {
     .bookmark {
       border-top: 1px solid $grayishBlue;
+      padding-top: 1.5rem;
     }
     .faq__header {
-      margin-bottom: 0;
-
       .faq-question {
         font-size: 1.2rem;
         font-weight: 400;
       }
+    }
+    .faq__dropdown-text p {
+      font-size: 1rem;
+      line-height: 2;
     }
   }
 }

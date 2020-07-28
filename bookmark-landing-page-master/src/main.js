@@ -7,6 +7,9 @@ const tabButtons = document.querySelectorAll('[role="tab"]');
 const tabPanels = document.querySelectorAll('[role="tabpanel"]');
 const featuresTab = document.querySelector('.features__tabs');
 
+const dropdownItem = document.querySelectorAll('.faq__questions-wrapper');
+const accordionHeading = document.querySelectorAll('.faq__header');
+
 function revealHamburgerNav() {
   const overlay = document.querySelector('.nav-overlay');
 
@@ -33,7 +36,23 @@ function handleClickTab(event) {
   tabPanel.hidden = false;
 }
 
+function toggleDropdown() {
+  const parentItem = this.parentNode;
+
+  dropdownItem.forEach((item) => {
+    if (parentItem === item) {
+      parentItem.classList.toggle('open');
+      return;
+    }
+    item.classList.remove('open');
+  });
+}
+
 hamburger.addEventListener('click', revealHamburgerNav);
 tabButtons.forEach((button) =>
   button.addEventListener('click', handleClickTab)
+);
+
+accordionHeading.forEach((item) =>
+  item.addEventListener('click', toggleDropdown)
 );
