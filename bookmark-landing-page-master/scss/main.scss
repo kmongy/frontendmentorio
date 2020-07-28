@@ -141,6 +141,16 @@ NAVIGATION
     opacity: 0.95;
   }
 }
+
+#logo-svg.open {
+  fill: #fff;
+}
+#logo-circle.open {
+  fill: #fff;
+}
+#logo-inner-circle.open {
+  fill: $veryDarkBlue;
+}
 /* 
 ---------- 
 HERO
@@ -655,6 +665,20 @@ footer {
     }
   }
 }
+
+.bottom {
+  .attribution {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: $softRed;
+      }
+    }
+  }
+}
 /*
 ----------
 MEDIA QUERIES
@@ -982,6 +1006,16 @@ MEDIA QUERIES
       position: absolute;
       top: 4rem;
       right: 0;
+    }
+  }
+}
+@media screen and (min-width: 91rem) {
+  .extension__flex-container {
+    & .extension:nth-child(2) {
+      position: static;
+    }
+    & .extension:last-child {
+      position: static;
     }
   }
 }

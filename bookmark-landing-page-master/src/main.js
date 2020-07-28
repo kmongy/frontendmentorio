@@ -2,6 +2,9 @@ import '/scss/main.scss';
 
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav__links');
+const logoSVG = document.querySelector('#logo-svg');
+const logoCircle = document.querySelector('#logo-circle');
+const logoInnerCircle = document.querySelector('#logo-inner-circle');
 
 const tabButtons = document.querySelectorAll('[role="tab"]');
 const tabPanels = document.querySelectorAll('[role="tabpanel"]');
@@ -20,6 +23,9 @@ function revealHamburgerNav() {
   overlay.classList.toggle('open');
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
+  logoSVG.classList.toggle('open');
+  logoCircle.classList.toggle('open');
+  logoInnerCircle.classList.toggle('open');
 }
 
 function handleClickTab(event) {
