@@ -1,3 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import './globals.scss';
 @import './variables.scss';
+
+.title {
+  font-size: 1.45rem;
+  padding-bottom: 0.5rem;
+}
+.header-total {
+  border-bottom: 1px solid $dark-grayish-blue;
+  color: $dark-grayish-blue;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
