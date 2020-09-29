@@ -23,36 +23,44 @@ body {
   position: relative;
   padding: 1rem 0 2rem 0;
 
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0.7rem;
-    right: 0;
-    background: $toggle-light;
-    border-radius: 0.75rem;
-    width: 3rem;
-    height: 1.45rem;
-    cursor: pointer;
-  }
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0.85rem;
-    right: 0.25rem;
-    background: white;
-    border-radius: 50%;
-    width: 1.1rem;
-    height: 1.1rem;
-    cursor: pointer;
-    z-index: 99;
-  }
-
   label {
     font-weight: 700;
     color: $dark-grayish-blue;
     cursor: pointer;
   }
   .toggle-checkbox {
-    display: none;
+    visibility: hidden;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0.7rem;
+      right: 0;
+      background: $toggle-light;
+      border-radius: 0.75rem;
+      width: 3rem;
+      height: 1.45rem;
+      cursor: pointer;
+      visibility: visible;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0.85rem;
+      right: 0.25rem;
+      background: white;
+      border-radius: 50%;
+      width: 1.1rem;
+      height: 1.1rem;
+      cursor: pointer;
+      z-index: 10;
+      visibility: visible;
+    }
+
+    &:checked {
+      &::before {
+        transform: translateX(-1.4rem);
+      }
+    }
   }
 }
