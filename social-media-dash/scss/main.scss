@@ -36,5 +36,27 @@
         padding-left: 0.5rem;
       }
     }
+    .follower-count {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    .follower-subtext {
+      color: $dark-grayish-blue;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.43rem;
+    }
+    .follower-count-today {
+      color: $lime-green;
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding-top: 2rem;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
   }
 }
