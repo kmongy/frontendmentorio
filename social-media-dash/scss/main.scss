@@ -16,6 +16,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  padding-bottom: 4rem;
 
   .social-media-card {
     display: flex;
@@ -24,6 +25,7 @@
     background: $grayish-blue;
     border-radius: 4px;
     padding: 2rem 0;
+    position: relative;
 
     .social-img {
       display: flex;
@@ -57,6 +59,30 @@
       svg {
         margin-right: 0.5rem;
       }
+    }
+  }
+
+  .facebook-card {
+    border-top: 4px solid $facebook;
+  }
+  .twitter-card {
+    border-top: 4px solid $twitter;
+  }
+  .instagram-card {
+    .instagram-border {
+      position: absolute;
+      background: $instagram;
+      border-radius: 4px 4px 0 0;
+      height: 4px;
+      width: 100%;
+      top: 0;
+    }
+  }
+  .youtube-card {
+    border-top: 4px solid $youtube;
+
+    .follower-count-today {
+      color: $bright-red;
     }
   }
 }
