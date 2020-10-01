@@ -86,7 +86,60 @@
     }
   }
 }
+.overview-heading {
+  color: $dark-grayish-blue;
+  font-size: 1.5rem;
+}
 .social-media-overview-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 2rem 0;
+
+  .social-media-pill {
+    background: $grayish-blue;
+    border-radius: 4px;
+    padding: 1.5rem;
+
+    .pill-top,
+    .pill-bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .pill-top {
+      padding-bottom: 1rem;
+
+      p {
+        color: $dark-grayish-blue;
+        font-weight: 700;
+      }
+    }
+
+    .pill-bottom {
+      align-items: flex-end;
+
+      .view-count {
+        line-height: 1;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .pill-percentage {
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: 700;
+
+        p {
+          padding-left: 0.25rem;
+          color: $bright-red;
+
+          &.positive {
+            color: $lime-green;
+          }
+        }
+      }
+    }
+  }
 }
