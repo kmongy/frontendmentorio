@@ -35,7 +35,7 @@ body {
     &::after {
       position: absolute;
       content: '';
-      top: 0.7rem;
+      top: 0.8rem;
       right: 0;
       background: $toggle-light;
       border-radius: 0.75rem;
@@ -43,11 +43,12 @@ body {
       height: 1.45rem;
       cursor: pointer;
       visibility: visible;
+      transition: all 0.3s ease;
     }
     &::before {
       position: absolute;
       content: '';
-      top: 0.85rem;
+      top: 0.98rem;
       right: 0.25rem;
       background: white;
       border-radius: 50%;
@@ -56,6 +57,7 @@ body {
       cursor: pointer;
       z-index: 10;
       visibility: visible;
+      transition: all 0.3s ease;
     }
 
     &:checked {
