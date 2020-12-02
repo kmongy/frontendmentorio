@@ -1,4 +1,5 @@
 import './scss/main.scss';
+
 const darkBG = document.querySelector('body');
 const socialMediaCard = document.querySelectorAll('.social-media-card');
 const toggleButton = document.querySelector('#toggle-button');
