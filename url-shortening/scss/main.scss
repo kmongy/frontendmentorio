@@ -8,7 +8,7 @@ Header/Nav
 header {
   display: flex;
   justify-content: space-between;
-  padding: 1.11rem 0.33rem 0.77rem 0.33rem;
+  padding: 2.11rem 1.33rem 1.77rem 1.33rem;
   position: relative;
 
   .main-navigation {
@@ -20,9 +20,8 @@ header {
     padding: 1rem;
     position: absolute;
     top: 4.5rem;
-    left: 0;
     text-align: center;
-    width: 100%;
+    width: 90%;
 
     & .main-links {
       color: white;
@@ -61,8 +60,8 @@ header {
     background: none;
     border: none;
     position: absolute;
-    top: 1.11rem;
-    right: 0.3rem;
+    top: 2.11rem;
+    right: 1.3rem;
 
     & span {
       display: block;
@@ -78,3 +77,45 @@ header {
 Hero
 -------
 */
+.hero {
+  padding-bottom: 4.5rem;
+
+  .hero-img-wrapper {
+    padding-left: 1.33rem;
+    overflow-x: hidden;
+
+    #hero-img {
+      width: 150%;
+    }
+  }
+
+  .hero-text {
+    padding: 1rem 1.33rem;
+    text-align: center;
+
+    .hero-tagline {
+      color: $veryDarkBlue;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      padding-bottom: 1rem;
+    }
+
+    .hero-sub-text {
+      color: $grayishViolet;
+      font-weight: 500;
+      padding-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+      background: none;
+      border: none;
+      background: $cyan;
+      border-radius: 2rem;
+      color: white;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 700;
+      padding: 0.75rem 2.25rem;
+    }
+  }
+}
