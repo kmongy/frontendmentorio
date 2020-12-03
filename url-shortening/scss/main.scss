@@ -1,2 +1,49 @@
 @import './variables';
 @import './globals';
+/*
+------
+Header/Nav
+-------
+*/
+header {
+  display: flex;
+  padding: 1.11rem 0.33rem 0.77rem 0.33rem;
+  position: relative;
+
+  .main-navigation {
+    & .main-links,
+    & .nav-login {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1.11rem;
+    right: 0.3rem;
+
+    & span {
+      display: block;
+      height: 0.2rem;
+      width: 1.844rem;
+      margin: 0.388rem;
+      background: $gray;
+    }
+  }
+}
+/*
+------
+Hero
+-------
+*/
+.hero {
+  .hero-img-wrapper {
+    width: 100%;
+
+    & .hero-img {
+      width: 100%;
+    }
+  }
+}
