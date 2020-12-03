@@ -8,20 +8,25 @@ Header/Nav
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2.11rem 1.33rem 1.77rem 1.33rem;
+  padding: 2.11rem 1.33rem 0.25rem 1.33rem;
   position: relative;
 
   .main-navigation {
     display: none;
-    justify-content: center;
-    align-items: center;
-    background: $darkViolet;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    position: absolute;
-    top: 4.5rem;
-    text-align: center;
-    width: 90%;
+
+    &.open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $darkViolet;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      position: absolute;
+      top: 5.5rem;
+      left: 1.33rem;
+      text-align: center;
+      width: 90%;
+    }
 
     & .main-links {
       color: white;
@@ -62,6 +67,7 @@ header {
     position: absolute;
     top: 2.11rem;
     right: 1.3rem;
+    cursor: pointer;
 
     & span {
       display: block;
@@ -78,19 +84,19 @@ Hero
 -------
 */
 .hero {
-  padding-bottom: 4.5rem;
+  padding: 1rem 0 4.5rem 0;
 
   .hero-img-wrapper {
-    padding-left: 1.33rem;
+    padding: 0 0 2.25rem 1.33rem;
     overflow-x: hidden;
 
     #hero-img {
-      width: 150%;
+      width: 145%;
     }
   }
 
   .hero-text {
-    padding: 1rem 1.33rem;
+    padding: 1.75rem 1.33rem 1rem 1.33rem;
     text-align: center;
 
     .hero-tagline {
