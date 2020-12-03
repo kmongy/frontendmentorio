@@ -12,7 +12,12 @@ header {
   position: relative;
 
   .main-navigation {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
 
     &.open {
       display: flex;
@@ -25,7 +30,9 @@ header {
       top: 5.5rem;
       left: 1.33rem;
       text-align: center;
-      width: 90%;
+      width: 89.5%;
+      opacity: 1;
+      visibility: visible;
     }
 
     & .main-links {
