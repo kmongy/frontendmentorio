@@ -7,13 +7,53 @@ Header/Nav
 */
 header {
   display: flex;
+  justify-content: space-between;
   padding: 1.11rem 0.33rem 0.77rem 0.33rem;
   position: relative;
 
   .main-navigation {
-    & .main-links,
-    & .nav-login {
-      display: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: $darkViolet;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    text-align: center;
+    width: 100%;
+
+    & .main-links {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 700;
+      width: 100%;
+
+      li {
+        padding: 1rem;
+      }
+
+      hr {
+        background: $grayishViolet;
+        border: none;
+        width: 90%;
+        height: 0.1rem;
+        margin: 1rem auto;
+      }
+
+      .sign-up-btn {
+        background: none;
+        border: none;
+        background: $cyan;
+        border-radius: 2rem;
+        color: white;
+        font-family: inherit;
+        font-size: 1.25rem;
+        font-weight: 700;
+        width: 100%;
+        padding: 0.75rem 0;
+      }
     }
   }
 
@@ -38,12 +78,3 @@ header {
 Hero
 -------
 */
-.hero {
-  .hero-img-wrapper {
-    width: 100%;
-
-    & .hero-img {
-      width: 100%;
-    }
-  }
-}
