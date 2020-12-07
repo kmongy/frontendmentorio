@@ -184,12 +184,67 @@ Stat Cards
 -------
 */
 .advanced-stats {
-  background: rgb(240, 240, 240);
-  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(216, 216, 216, 0.4);
+  padding: 9rem 1.33rem 2rem 1.33rem;
+  text-align: center;
+  position: relative;
+
+  h2,
+  h3 {
+    color: $veryDarkBlue;
+    padding: 1rem 0;
+  }
+
+  p {
+    color: $grayishViolet;
+    font-size: 1rem;
+    font-weight: 500;
+  }
 
   .stats-blurb-header {
-    h2 {
-      color: $veryDarkBlue;
+    padding-bottom: 5rem;
+  }
+
+  .stats-details {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 4rem 1rem 1rem 1rem;
+    margin-bottom: 8rem;
+    position: relative;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $darkViolet;
+      border-radius: 50%;
+      width: 5.5rem;
+      height: 5.5rem;
+      position: absolute;
+      top: -2.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  .vertical-line {
+    background: $cyan;
+    width: 0.65rem;
+    height: 10rem;
+
+    &.line-1 {
+      position: absolute;
+      top: 35rem;
+      z-index: -1;
+    }
+    &.line-2 {
+      position: absolute;
+      top: 60rem;
+      z-index: -1;
     }
   }
 }
