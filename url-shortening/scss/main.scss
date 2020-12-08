@@ -189,7 +189,7 @@ Stat Cards
   justify-content: space-between;
   align-items: center;
   background: rgba(216, 216, 216, 0.35);
-  padding: 9rem 1.33rem 2rem 1.33rem;
+  padding: 9rem 1.33rem 0.5rem 1.33rem;
   text-align: center;
   position: relative;
   z-index: -1;
@@ -248,4 +248,46 @@ Stat Cards
       z-index: -1;
     }
   }
+}
+.boost-cta {
+  background: $darkViolet url(../imgs/bg-boost-mobile.svg) no-repeat;
+  background: cover;
+  color: white;
+  text-align: center;
+  padding: 5.75rem 1.5rem;
+
+  & button {
+    background: none;
+    border: none;
+    background: $cyan;
+    border-radius: 2rem;
+    color: white;
+    font-family: inherit;
+    font-size: 1.35rem;
+    font-weight: 700;
+    padding: 0.75rem 2.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+}
+footer {
+  background: $veryDarkViolet;
+  padding: 1rem 1.33rem;
+
+  h4 {
+    color: white;
+  }
+
+  .footer-social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    padding: 1rem 0;
+    margin: 0 auto;
+  }
+}
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
 }
