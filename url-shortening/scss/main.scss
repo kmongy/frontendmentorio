@@ -271,11 +271,30 @@ Stat Cards
   }
 }
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: $veryDarkViolet;
   padding: 1rem 1.33rem;
 
-  h4 {
-    color: white;
+  .logo {
+    padding: 2rem 0;
+  }
+
+  .footer-links {
+    text-align: center;
+    padding-bottom: 1.5rem;
+
+    h4 {
+      color: white;
+      padding-bottom: 1.5rem;
+    }
+    li {
+      color: $grayishViolet;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+    }
   }
 
   .footer-social-media {
@@ -283,11 +302,14 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 70%;
-    padding: 1rem 0;
+    padding: 2rem 0;
     margin: 0 auto;
   }
 }
 .attribution {
-  font-size: 0.75rem;
+  background: $veryDarkViolet;
+  color: white;
+  font-size: 0.7rem;
   text-align: center;
+  padding-bottom: 0.5rem;
 }
