@@ -37,6 +37,7 @@ function ipGenerator(event) {
       div.appendChild(shortenedIP);
       div.appendChild(copyButton);
 
+      form.reset();
       console.log(data.result);
     });
 }
