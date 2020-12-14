@@ -38,11 +38,10 @@ function ipGenerator(event) {
       div.appendChild(copyButton);
 
       function copyLink() {
-        console.log(shortenedIP.textContent);
         let copied = shortenedIP.textContent;
 
         navigator.clipboard.writeText(copied).then(() => {
-          copyButton.textContent = 'Copied';
+          copyButton.textContent = 'Copied!';
           copyButton.style.background = 'hsl(257, 27%, 26%)';
         });
       }
