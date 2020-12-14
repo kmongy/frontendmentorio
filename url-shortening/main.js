@@ -32,13 +32,25 @@ function ipGenerator(event) {
       shortenedIP.textContent = data.result.short_link;
       copyButton.textContent = 'Copy';
 
-      linkResults.appendChild(div);
+      linkResults.insertAdjacentElement('afterbegin', div);
       div.appendChild(originalIP);
       div.appendChild(shortenedIP);
       div.appendChild(copyButton);
 
+      function copyLink() {
+        console.log(shortenedIP.textContent);
+        let copied = shortenedIP.textContent;
+
+        navigator.clipboard.writeText(copied).then(() => {
+          copyButton.textContent = 'Copied';
+          copyButton.style.background = 'hsl(257, 27%, 26%)';
+        });
+      }
+
       form.reset();
       console.log(data.result);
+
+      copyButton.addEventListener('click', copyLink);
     });
 }
 
