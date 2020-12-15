@@ -164,6 +164,26 @@ Form - Shortening link
       font-size: 1rem;
       color: $grayishViolet;
     }
+
+    &.error-message {
+      border: 2px solid $red;
+      color: $red;
+      outline: none;
+
+      &::placeholder {
+        color: $red;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .error-text {
+    color: $red;
+    display: none;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: -1rem 0 1rem 0;
+    text-align: left;
   }
 
   .form-button {
@@ -177,6 +197,7 @@ Form - Shortening link
     font-size: inherit;
     padding: 0.5rem;
     width: 100%;
+    cursor: pointer;
   }
 }
 /*

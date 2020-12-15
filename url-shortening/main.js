@@ -16,41 +16,50 @@ function ipGenerator(event) {
   const formIP = input.value;
   const shrtcodeAPI = `https://api.shrtco.de/v2/shorten?url=${formIP}`;
 
-  fetch(shrtcodeAPI)
-    .then((response) => response.json())
-    .then((data) => {
-      let div = document.createElement('div');
-      let originalIP = document.createElement('p');
-      let shortenedIP = document.createElement('p');
-      let copyButton = document.createElement('button');
+  const errorText = document.querySelector('.error-text');
 
-      div.classList.add('shortened-result');
-      originalIP.classList.add('originalIP');
-      shortenedIP.classList.add('shortenedIP');
+  if (!formIP) {
+    input.classList.add('error-message');
+    errorText.style.display = 'block';
+  } else {
+    input.classList.remove('error-message');
+    errorText.style.display = 'none';
 
-      originalIP.textContent = data.result.original_link;
-      shortenedIP.textContent = data.result.short_link;
-      copyButton.textContent = 'Copy';
+    fetch(shrtcodeAPI)
+      .then((response) => response.json())
+      .then((data) => {
+        let div = document.createElement('div');
+        let originalIP = document.createElement('p');
+        let shortenedIP = document.createElement('p');
+        let copyButton = document.createElement('button');
 
-      linkResults.insertAdjacentElement('afterbegin', div);
-      div.appendChild(originalIP);
-      div.appendChild(shortenedIP);
-      div.appendChild(copyButton);
+        div.classList.add('shortened-result');
+        originalIP.classList.add('originalIP');
+        shortenedIP.classList.add('shortenedIP');
 
-      function copyLink() {
-        let copied = shortenedIP.textContent;
+        originalIP.textContent = data.result.original_link;
+        shortenedIP.textContent = data.result.short_link;
+        copyButton.textContent = 'Copy';
 
-        navigator.clipboard.writeText(copied).then(() => {
-          copyButton.textContent = 'Copied!';
-          copyButton.style.background = 'hsl(257, 27%, 26%)';
-        });
-      }
+        linkResults.insertAdjacentElement('afterbegin', div);
+        div.appendChild(originalIP);
+        div.appendChild(shortenedIP);
+        div.appendChild(copyButton);
 
-      form.reset();
-      console.log(data.result);
+        function copyLink() {
+          let copied = shortenedIP.textContent;
 
-      copyButton.addEventListener('click', copyLink);
-    });
+          navigator.clipboard.writeText(copied).then(() => {
+            copyButton.textContent = 'Copied!';
+            copyButton.style.background = 'hsl(257, 27%, 26%)';
+          });
+        }
+
+        form.reset();
+
+        copyButton.addEventListener('click', copyLink);
+      });
+  }
 }
 
 hamburger.addEventListener('click', expandMenu);
