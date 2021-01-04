@@ -368,3 +368,73 @@ footer {
   text-align: center;
   padding-bottom: 0.5rem;
 }
+@media screen and (min-width: 750px) {
+  header {
+    justify-content: start;
+    align-items: center;
+    max-width: 85%;
+    padding-top: 3rem;
+    margin: 0 auto;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      padding-right: 1.33rem;
+    }
+
+    .main-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      width: 100%;
+
+      a {
+        color: $lightGray;
+        font-size: 1.1rem;
+      }
+
+      .main-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        hr {
+          display: none;
+        }
+
+        li {
+          padding: 0;
+        }
+        .nav-left {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          li {
+            padding: 0 1.33rem;
+          }
+        }
+        .nav-right {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          li {
+            padding: 0 1.33rem;
+          }
+          .sign-up-btn {
+            font-size: 1.1rem;
+            width: 7rem;
+            padding: 0.35rem;
+          }
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
