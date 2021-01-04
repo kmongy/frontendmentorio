@@ -29,11 +29,13 @@ function ipGenerator(event) {
       .then((response) => response.json())
       .then((data) => {
         let div = document.createElement('div');
+        let shortenedDiv = document.createElement('div');
         let originalIP = document.createElement('p');
         let shortenedIP = document.createElement('p');
         let copyButton = document.createElement('button');
 
         div.classList.add('shortened-result');
+        shortenedDiv.classList.add('shortened-right-copy');
         originalIP.classList.add('originalIP');
         shortenedIP.classList.add('shortenedIP');
 
@@ -43,8 +45,9 @@ function ipGenerator(event) {
 
         linkResults.insertAdjacentElement('afterbegin', div);
         div.appendChild(originalIP);
-        div.appendChild(shortenedIP);
-        div.appendChild(copyButton);
+        div.appendChild(shortenedDiv);
+        shortenedDiv.appendChild(shortenedIP);
+        shortenedDiv.appendChild(copyButton);
 
         function copyLink() {
           let copied = shortenedIP.textContent;

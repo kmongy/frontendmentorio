@@ -372,7 +372,7 @@ footer {
 MEDIA QUERIES
 -------
 */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 850px) {
   body {
     overflow-x: hidden;
   }
@@ -475,6 +475,66 @@ MEDIA QUERIES
 
       #hero-img {
         width: 155%;
+      }
+    }
+  }
+  #form-link-submission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $darkViolet url(../imgs/bg-shorten-desktop.svg) no-repeat top
+      right;
+    padding: 3.1rem;
+    width: 80%;
+
+    #form-link {
+      border-radius: 0.5rem;
+      padding: 1rem;
+      width: 80%;
+      margin-bottom: 0;
+      position: relative;
+
+      &::placeholder {
+        font-size: 1.1rem;
+      }
+    }
+    .form-button {
+      border-radius: 0.5rem;
+      padding: 1rem;
+      width: 18%;
+    }
+    .error-text {
+      position: absolute;
+      top: 52.6rem;
+    }
+  }
+  .links-shortened-results {
+    width: 80%;
+
+    .shortened-result {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.33rem;
+      margin: 1rem 0;
+
+      .originalIP {
+        border: none;
+        padding: 0;
+      }
+
+      .shortened-right-copy {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+      }
+
+      .shortenedIP {
+        padding-right: 2rem;
+      }
+
+      button {
+        width: 25%;
       }
     }
   }
