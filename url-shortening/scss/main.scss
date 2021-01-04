@@ -246,7 +246,6 @@ Shortened Links
     }
   }
 }
-
 /*
 ------
 Stat Cards
@@ -368,12 +367,21 @@ footer {
   text-align: center;
   padding-bottom: 0.5rem;
 }
+/*
+------
+MEDIA QUERIES
+-------
+*/
 @media screen and (min-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
   header {
     justify-content: start;
     align-items: center;
-    max-width: 85%;
+    max-width: 80%;
     padding-top: 3rem;
+    padding-bottom: 3rem;
     margin: 0 auto;
 
     .logo {
@@ -393,7 +401,7 @@ footer {
 
       a {
         color: $lightGray;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       .main-links {
@@ -414,7 +422,7 @@ footer {
           align-items: center;
 
           li {
-            padding: 0 1.33rem;
+            padding: 0 1rem;
           }
         }
         .nav-right {
@@ -423,10 +431,10 @@ footer {
           align-items: center;
 
           li {
-            padding: 0 1.33rem;
+            padding: 0 1rem;
           }
           .sign-up-btn {
-            font-size: 1.1rem;
+            font-size: 1rem;
             width: 7rem;
             padding: 0.35rem;
           }
@@ -435,6 +443,39 @@ footer {
     }
     .hamburger {
       display: none;
+    }
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 80%;
+    margin: 0 auto;
+
+    .hero-text {
+      text-align: left;
+      width: 55%;
+
+      .hero-tagline {
+        font-size: 4.25rem;
+        padding-bottom: 0;
+      }
+      .hero-sub-text {
+        font-size: 1.25rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    .hero-img-wrapper {
+      padding: 0 0 0 4rem;
+      overflow-x: visible;
+      width: 50%;
+
+      #hero-img {
+        width: 155%;
+      }
     }
   }
 }
