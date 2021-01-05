@@ -305,7 +305,6 @@ Stat Cards
 }
 .boost-cta {
   background: $darkViolet url(../imgs/bg-boost-mobile.svg) no-repeat;
-  background: cover;
   color: white;
   text-align: center;
   padding: 5.75rem 1.5rem;
@@ -492,7 +491,6 @@ MEDIA QUERIES
       padding: 1rem;
       width: 80%;
       margin-bottom: 0;
-      position: relative;
 
       &::placeholder {
         font-size: 1.1rem;
@@ -503,9 +501,15 @@ MEDIA QUERIES
       padding: 1rem;
       width: 18%;
     }
+    .form-link-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+    }
     .error-text {
       position: absolute;
-      top: 52.6rem;
+      bottom: -2.5rem;
     }
   }
   .links-shortened-results {
@@ -598,6 +602,44 @@ MEDIA QUERIES
         left: 1rem;
         z-index: -1;
       }
+    }
+  }
+  .boost-cta {
+    background: $darkViolet url(../imgs/bg-boost-desktop.svg) no-repeat;
+    display: grid;
+    place-content: center;
+    height: 100%;
+    padding: 3.45rem 0;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    button {
+      width: 50%;
+      margin: 1.5rem auto 0 auto;
+    }
+  }
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 3rem;
+    width: 80%;
+
+    .logo {
+      margin-right: 10rem;
+    }
+
+    .footer-links {
+      padding-top: 2rem;
+      text-align: left;
+    }
+
+    .footer-social-media {
+      width: 16%;
+      margin: 0;
     }
   }
 }
