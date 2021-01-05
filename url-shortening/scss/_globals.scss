@@ -24,8 +24,12 @@ li {
 a {
   text-decoration: none;
   color: white;
+  transition: 0.3s all ease;
+
   &:hover {
     color: $cyan;
-    text-decoration: underline;
   }
+}
+button {
+  transition: 0.3s all ease;
 }
