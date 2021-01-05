@@ -266,6 +266,7 @@ Stat Cards
 */
 .advanced-stats {
   margin-top: 6rem;
+
   .advanced-stats-wrapper {
     background: rgba(216, 216, 216, 0.5);
     display: flex;
@@ -291,6 +292,21 @@ Stat Cards
 
   .stats-blurb-header {
     padding-bottom: 5rem;
+  }
+
+  .stats-card-wrapper {
+    position: relative;
+
+    .blue-line-bg {
+      display: block;
+      background: $cyan;
+      height: 40rem;
+      width: 0.5rem;
+      position: absolute;
+      top: 8rem;
+      left: 49%;
+      z-index: -1;
+    }
   }
 
   .stats-details {
