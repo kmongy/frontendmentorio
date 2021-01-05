@@ -538,4 +538,66 @@ MEDIA QUERIES
       }
     }
   }
+  .advanced-stats {
+    .stats-blurb-header {
+      margin-top: 4rem;
+
+      h2 {
+        font-size: 2.25rem;
+      }
+      p {
+        width: 70%;
+        font-size: 1.1rem;
+        margin: 0 auto;
+      }
+    }
+
+    .stats-card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      position: relative;
+
+      .stats-details {
+        padding: 4rem 1.75rem 2rem 1.75rem;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        height: fit-content;
+        width: 100%;
+
+        h3,
+        p {
+          text-align: left;
+        }
+        p {
+          font-size: 0.91rem;
+          line-height: 1.8;
+        }
+
+        .icon {
+          left: 1.5rem;
+          margin: 0;
+        }
+
+        &.records {
+          margin-top: 2.5rem;
+        }
+
+        &.customizable {
+          margin-top: 4.5rem;
+        }
+      }
+
+      .blue-line-bg {
+        display: block;
+        background: $cyan;
+        height: 0.5rem;
+        width: 70%;
+        position: absolute;
+        top: 9rem;
+        left: 1rem;
+        z-index: -1;
+      }
+    }
+  }
 }
