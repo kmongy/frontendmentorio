@@ -12,5 +12,12 @@ html {
   padding: 0;
 }
 body {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 1fr));
+  grid-template-rows: repeat(4, minmax(350px, 1fr));
   font-family: 'Spartan', sans-serif;
+}
+ul,
+li {
+  list-style: none;
 }
