@@ -26,7 +26,7 @@ li {
 }
 @media screen and (min-width: 750px) {
   body {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 534px auto;
+    grid-template-columns: repeat(24, 60px);
+    grid-template-rows: 534px 266px;
   }
 }
