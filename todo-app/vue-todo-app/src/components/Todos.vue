@@ -1,38 +1,42 @@
 <template>
   <div class="todo-wrapper">
-    <header class="todo-header">
-      <h1>TODO</h1>
-      <div class="dark-mode-toggle">
-        <svg
-          class="moon-toggle"
-          xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-        >
-          <path
-            fill="#FFF"
-            fill-rule="evenodd"
-            d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"
-          />
-        </svg>
-      </div>
-    </header>
+    <div class="header-wrapper">
+      <header class="todo-header">
+        <h1>TODO</h1>
+        <div class="dark-mode-toggle">
+          <svg
+            class="moon-toggle"
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+          >
+            <path
+              fill="#FFF"
+              fill-rule="evenodd"
+              d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"
+            />
+          </svg>
+        </div>
+      </header>
 
-    <form class="todo-form" @submit.prevent="todoSubmit">
-      <input
-        v-model="todoItem"
-        type="text"
-        placeholder="Create a new todo..."
-      />
-    </form>
+      <form class="todo-form" @submit.prevent="todoSubmit">
+        <div class="completion-circle"></div>
+        <input
+          v-model="todoItem"
+          class="todo-input"
+          type="text"
+          placeholder="Create a new todo..."
+        />
+      </form>
+    </div>
 
     <div class="items-in-todos">
       <ul>
-        <li v-for="(todo, index) in todosArray" :key="index">
-          <div class="check"></div>
+        <li class="todo-items" v-for="(todo, index) in todosArray" :key="index">
+          <div class="completion-circle"></div>
           {{ todo.task }}
           <div class="delete-todo" @click="deleteTodo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
               <path
                 fill="#494C6B"
                 fill-rule="evenodd"
@@ -44,6 +48,7 @@
       </ul>
       <div class="todos-list-info">
         <p>{{ todosArray.length }} items left</p>
+        <p>Clear Completed</p>
       </div>
     </div>
 
@@ -53,7 +58,7 @@
       <p>Completed</p>
     </div>
 
-    <p>Drag and drop to reorder list</p>
+    <p class="drag-drop-info">Drag and drop to reorder list</p>
   </div>
 </template>
 
@@ -76,9 +81,6 @@ export default {
         task: this.todoItem,
         completed: false,
       });
-
-      console.log(this.todoItem);
-      console.log(this.todosArray);
 
       this.todoItem = "";
     },

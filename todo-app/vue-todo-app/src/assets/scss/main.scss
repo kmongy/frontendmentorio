@@ -12,21 +12,116 @@ html {
   padding: 0;
 }
 body {
+  background: $lightGreyishBlue;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
 }
-.todo-header {
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+svg {
+  cursor: pointer;
+}
+.header-wrapper {
   background: url('~@/assets/images/bg-mobile-light.jpg') no-repeat;
   background-image: cover;
   min-height: 200px;
   width: 375px;
+  padding: 0 1.5rem;
+}
+.todo-header {
   display: flex;
   justify-content: space-between;
-
-  padding: 3.5rem 1.25rem;
+  padding: 3rem 0 1.75rem 0;
 
   h1 {
+    font-size: 1.7rem;
     letter-spacing: 0.7rem;
     color: white;
   }
+}
+.completion-circle {
+  border: 1px solid $lightGreyishBlue;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.todo-form {
+  position: relative;
+
+  .completion-circle {
+    position: absolute;
+    display: flex;
+    top: 0.85rem;
+    left: 1.25rem;
+  }
+}
+.todo-input {
+  border: none;
+  border-radius: 0.35rem;
+  color: $grey;
+  font-family: inherit;
+  padding: 1.25rem 1rem 1.25rem 3.75rem;
+  width: 100%;
+
+  &::placeholder {
+    color: $darkGreyishBlue;
+  }
+}
+.items-in-todos {
+  background: white;
+  border-radius: 0.35rem;
+  margin: -1.5rem 1.5rem 0 1.5rem;
+
+  .todo-items {
+    position: relative;
+    border-bottom: 1px solid $greyishBlue;
+    color: $grey;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .completion-circle {
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  .delete-todo {
+    position: absolute;
+    right: 1.25rem;
+  }
+}
+.todos-list-info {
+  display: flex;
+  justify-content: space-between;
+  color: $darkGreyishBlue;
+  font-size: 0.8rem;
+  padding: 1.25rem;
+}
+.todos-status {
+  background: white;
+  border-radius: 0.35rem;
+  color: $darkGreyishBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 1.25rem;
+  margin: 1rem 1.5rem 2rem 1.5rem;
+
+  p {
+    padding: 0 0.5rem;
+  }
+}
+.drag-drop-info {
+  color: $darkGreyishBlue;
+  font-size: 0.9rem;
+  text-align: center;
+  padding-top: 1rem;
 }
