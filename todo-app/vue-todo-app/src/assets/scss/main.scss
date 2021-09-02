@@ -48,6 +48,12 @@ svg {
   border-radius: 50%;
   width: 24px;
   height: 24px;
+
+  &.complete {
+    display: grid;
+    place-content: center;
+    background: $backGroundGradient;
+  }
 }
 .todo-form {
   position: relative;
@@ -86,9 +92,30 @@ svg {
     padding: 1rem 1.25rem;
   }
 
+  .todo-checkbox-wrapper {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
   .completion-circle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    margin-right: 1rem;
+  }
+
+  .todo-item-checkbox {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.3rem;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .todo-item-text {
+    padding: 0 1.5rem;
   }
 
   .delete-todo {

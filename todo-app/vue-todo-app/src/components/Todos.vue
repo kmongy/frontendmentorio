@@ -34,8 +34,17 @@
     <div class="items-in-todos">
       <ul>
         <li class="todo-items" v-for="taskItem in taskList" :key="taskItem">
-          <div class="completion-circle"></div>
-          {{ taskItem }}
+          <div class="todo-checkbox-wrapper">
+            <div class="completion-circle complete" v-show="taskItem.complete">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+            </div>
+            <div class="completion-circle" v-show="!taskItem.complete">
+            </div>
+            <input v-model="taskItem.complete" :checked="taskItem.complete" type="checkbox" class="todo-item-checkbox">
+          </div>
+          <p class="todo-item-text">
+            {{ taskItem.label }}
+          </p>
           <div class="delete-todo">
             <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
               <path
@@ -49,7 +58,7 @@
       </ul>
       
       <div class="todos-list-info">
-        <p> items left</p>
+        <p>{{ taskList.length }} items left</p>
         <p>Clear Completed</p>
       </div>
     </div>
@@ -77,9 +86,10 @@ export default {
     });
 
     const addTask = () => {
-
-
-      state.taskList.push(state.newTaskInput);
+      state.taskList.push({
+        label: state.newTaskInput,
+        completed: false
+      });
       state.newTaskInput = '';
     }
 
