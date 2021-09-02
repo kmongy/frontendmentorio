@@ -118,6 +118,7 @@ svg {
     padding: 0 1rem;
 
     &.complete {
+      color: $greyishBlue;
       text-decoration: line-through;
     }
   }
