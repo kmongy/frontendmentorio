@@ -115,7 +115,11 @@ svg {
   }
 
   .todo-item-text {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
+
+    &.complete {
+      text-decoration: line-through;
+    }
   }
 
   .delete-todo {

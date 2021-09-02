@@ -42,7 +42,11 @@
             </div>
             <input v-model="taskItem.complete" :checked="taskItem.complete" type="checkbox" class="todo-item-checkbox">
           </div>
-          <p class="todo-item-text">
+
+          <p class="todo-item-text" v-show="!taskItem.complete">
+            {{ taskItem.label }}
+          </p>
+          <p class="todo-item-text complete" v-show="taskItem.complete">
             {{ taskItem.label }}
           </p>
           <div class="delete-todo">
