@@ -46,6 +46,7 @@
           </div>
         </li>
       </ul>
+      
       <div class="todos-list-info">
         <p>{{ todosArray.length }} items left</p>
         <p>Clear Completed</p>
