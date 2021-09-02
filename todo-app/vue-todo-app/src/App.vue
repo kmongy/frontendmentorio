@@ -1,5 +1,7 @@
 <template>
-  <Todos />
+  <main>
+    <Todos />
+  </main>
 </template>
 
 <script>

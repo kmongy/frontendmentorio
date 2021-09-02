@@ -2,7 +2,7 @@
   <div class="todo-wrapper">
     <div class="header-wrapper">
       <header class="todo-header">
-        <h1>TODO</h1>
+        <h1 class="todo-title">TODO</h1>
         <div class="dark-mode-toggle">
           <svg
             class="moon-toggle"
@@ -19,23 +19,24 @@
         </div>
       </header>
 
-      <form class="todo-form" @submit.prevent="todoSubmit">
+      <form class="todo-form" @submit.prevent>
         <div class="completion-circle"></div>
         <input
-          v-model="todoItem"
+          v-model="newTaskInput"
           class="todo-input"
           type="text"
           placeholder="Create a new todo..."
+          @keyup.enter="addTask"
         />
       </form>
     </div>
 
     <div class="items-in-todos">
       <ul>
-        <li class="todo-items" v-for="(todo, index) in todosArray" :key="index">
+        <li class="todo-items" v-for="taskItem in taskList" :key="taskItem">
           <div class="completion-circle"></div>
-          {{ todo.task }}
-          <div class="delete-todo" @click="deleteTodo">
+          {{ taskItem }}
+          <div class="delete-todo">
             <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
               <path
                 fill="#494C6B"
@@ -48,15 +49,15 @@
       </ul>
       
       <div class="todos-list-info">
-        <p>{{ todosArray.length }} items left</p>
+        <p> items left</p>
         <p>Clear Completed</p>
       </div>
     </div>
 
     <div class="todos-status">
-      <p>All</p>
-      <p>Active</p>
-      <p>Completed</p>
+      <p class="todo-all-selection">All</p>
+      <p class="todo-active-selection">Active</p>
+      <p class="todo-completed-selection">Completed</p>
     </div>
 
     <p class="drag-drop-info">Drag and drop to reorder list</p>
@@ -64,31 +65,28 @@
 </template>
 
 <script>
+import { reactive, toRefs } from 'vue';
+
 export default {
   name: "Todos",
 
-  data() {
+  setup() {
+    const state = reactive({
+      newTaskInput: '',
+      taskList: []
+    });
+
+    const addTask = () => {
+
+
+      state.taskList.push(state.newTaskInput);
+      state.newTaskInput = '';
+    }
+
     return {
-      todoItem: "",
-      todosArray: [],
-    };
-  },
-
-  methods: {
-    todoSubmit() {
-      if (this.todoItem.length === 0) return;
-
-      this.todosArray.push({
-        task: this.todoItem,
-        completed: false,
-      });
-
-      this.todoItem = "";
-    },
-
-    deleteTodo(index) {
-      this.todosArray.splice(index, 1);
-    },
-  },
+      ...toRefs(state),
+      addTask
+    }
+  }
 };
 </script>
