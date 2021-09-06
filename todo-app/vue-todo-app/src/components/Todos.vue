@@ -33,24 +33,40 @@
 
     <div class="items-in-todos">
       <ul>
-        <li class="todo-items" v-for="taskItem in taskList" :key="taskItem">
+        <li class="todo-items" v-for="taskItem in tasksInView" :key="taskItem">
           <div class="todo-checkbox-wrapper">
-            <div class="completion-circle complete" v-show="taskItem.complete">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+            <div class="completion-circle completed" v-show="taskItem.completed">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 4.304L3.696 7l6-6"
+                />
+              </svg>
             </div>
-            <div class="completion-circle" v-show="!taskItem.complete">
-            </div>
-            <input v-model="taskItem.complete" :checked="taskItem.complete" type="checkbox" class="todo-item-checkbox">
+            <div class="completion-circle" v-show="!taskItem.completed"></div>
+            <input
+              v-model="taskItem.completed"
+              :checked="taskItem.completed"
+              type="checkbox"
+              class="todo-item-checkbox"
+            />
           </div>
 
-          <p class="todo-item-text" v-show="!taskItem.complete">
+          <p class="todo-item-text" v-show="!taskItem.completed">
             {{ taskItem.label }}
           </p>
-          <p class="todo-item-text complete" v-show="taskItem.complete">
+          <p class="todo-item-text completed" v-show="taskItem.completed">
             {{ taskItem.label }}
           </p>
           <div class="delete-todo">
-            <svg class="delete" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <svg
+              class="delete"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+            >
               <path
                 fill="#494C6B"
                 fill-rule="evenodd"
@@ -60,17 +76,17 @@
           </div>
         </li>
       </ul>
-      
+
       <div class="todos-list-info">
-        <p>{{ taskList.length }} items left</p>
+        <p>{{ activeItemsCurrently.currentTaskLength }} items left</p>
         <p>Clear Completed</p>
       </div>
     </div>
 
     <div class="todos-status">
-      <p class="todo-all-selection">All</p>
-      <p class="todo-active-selection">Active</p>
-      <p class="todo-completed-selection">Completed</p>
+      <p class="todo-all-selection" @click="setView('All')">All</p>
+      <p class="todo-active-selection" @click="setView('Active')">Active</p>
+      <p class="todo-completed-selection" @click="setView('Completed')">Completed</p>
     </div>
 
     <p class="drag-drop-info">Drag and drop to reorder list</p>
@@ -78,29 +94,53 @@
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue';
+import { computed, reactive, toRefs } from "vue";
 
 export default {
   name: "Todos",
 
   setup() {
     const state = reactive({
-      newTaskInput: '',
-      taskList: []
+      currentView: "All",
+      newTaskInput: "",
+      taskList: [],
+    });
+
+    const activeItemsCurrently = reactive({
+      currentTaskLength: computed(() => {
+        return state.taskList.filter(item => item.completed === false).length;
+      })
+    })
+
+    const tasksInView = computed(() => {
+      if (state.currentView === "Active") {
+        return state.taskList.filter((item) => item.completed === false);
+      } else if (state.currentView === "Completed") {
+        return state.taskList.filter((item) => item.completed === true);
+      } else {
+        return state.taskList;
+      }
     });
 
     const addTask = () => {
       state.taskList.push({
         label: state.newTaskInput,
-        completed: false
+        completed: false,
       });
-      state.newTaskInput = '';
+      state.newTaskInput = "";
+    };
+
+    const setView = (viewLabel) => {
+      state.currentView = viewLabel;
     }
 
     return {
       ...toRefs(state),
-      addTask
-    }
-  }
+      addTask,
+      tasksInView,
+      setView,
+      activeItemsCurrently
+    };
+  },
 };
 </script>

@@ -49,7 +49,7 @@ svg {
   width: 24px;
   height: 24px;
 
-  &.complete {
+  &.completed {
     display: grid;
     place-content: center;
     background: $backGroundGradient;
@@ -117,7 +117,7 @@ svg {
   .todo-item-text {
     padding: 0 1rem;
 
-    &.complete {
+    &.completed {
       color: $greyishBlue;
       text-decoration: line-through;
     }
@@ -149,6 +149,11 @@ svg {
 
   p {
     padding: 0 0.5rem;
+    cursor: pointer;
+
+    &:active {
+      color: $brightBlue;
+    }
   }
 }
 .drag-drop-info {
