@@ -55,12 +55,12 @@
           </div>
 
           <p class="todo-item-text" v-show="!taskItem.completed">
-            {{ taskItem.label }}
+            {{ taskItem.label}}
           </p>
           <p class="todo-item-text completed" v-show="taskItem.completed">
             {{ taskItem.label }}
           </p>
-          <div class="delete-todo">
+          <div class="delete-todo" @click="deleteTask(taskItem.id)">
             <svg
               class="delete"
               xmlns="http://www.w3.org/2000/svg"
@@ -124,11 +124,17 @@ export default {
 
     const addTask = () => {
       state.taskList.push({
+        id: Date.now(),
         label: state.newTaskInput,
         completed: false,
       });
       state.newTaskInput = "";
     };
+
+    const deleteTask = taskId => {
+      const taskIndex = state.taskList.findIndex(task => task.id === taskId);
+      state.taskList.splice(taskIndex, 1);
+    }
 
     const setView = (viewLabel) => {
       state.currentView = viewLabel;
@@ -139,7 +145,8 @@ export default {
       addTask,
       tasksInView,
       setView,
-      activeItemsCurrently
+      activeItemsCurrently,
+      deleteTask
     };
   },
 };
