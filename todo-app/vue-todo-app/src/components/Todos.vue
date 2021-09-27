@@ -35,7 +35,10 @@
       <ul>
         <li class="todo-items" v-for="taskItem in tasksInView" :key="taskItem">
           <div class="todo-checkbox-wrapper">
-            <div class="completion-circle completed" v-show="taskItem.completed">
+            <div
+              class="completion-circle completed"
+              v-show="taskItem.completed"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
                 <path
                   fill="none"
@@ -55,7 +58,7 @@
           </div>
 
           <p class="todo-item-text" v-show="!taskItem.completed">
-            {{ taskItem.label}}
+            {{ taskItem.label }}
           </p>
           <p class="todo-item-text completed" v-show="taskItem.completed">
             {{ taskItem.label }}
@@ -86,7 +89,9 @@
     <div class="todos-status">
       <p class="todo-all-selection" @click="setView('All')">All</p>
       <p class="todo-active-selection" @click="setView('Active')">Active</p>
-      <p class="todo-completed-selection" @click="setView('Completed')">Completed</p>
+      <p class="todo-completed-selection" @click="setView('Completed')">
+        Completed
+      </p>
     </div>
 
     <p class="drag-drop-info">Drag and drop to reorder list</p>
@@ -108,9 +113,9 @@ export default {
 
     const activeItemsCurrently = reactive({
       currentTaskLength: computed(() => {
-        return state.taskList.filter(item => item.completed === false).length;
-      })
-    })
+        return state.taskList.filter((item) => item.completed === false).length;
+      }),
+    });
 
     const tasksInView = computed(() => {
       if (state.currentView === "Active") {
@@ -131,14 +136,14 @@ export default {
       state.newTaskInput = "";
     };
 
-    const deleteTask = taskId => {
-      const taskIndex = state.taskList.findIndex(task => task.id === taskId);
+    const deleteTask = (taskId) => {
+      const taskIndex = state.taskList.findIndex((task) => task.id === taskId);
       state.taskList.splice(taskIndex, 1);
-    }
+    };
 
     const setView = (viewLabel) => {
       state.currentView = viewLabel;
-    }
+    };
 
     return {
       ...toRefs(state),
@@ -146,7 +151,7 @@ export default {
       tasksInView,
       setView,
       activeItemsCurrently,
-      deleteTask
+      deleteTask,
     };
   },
 };
