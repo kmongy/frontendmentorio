@@ -1,4 +1,5 @@
 @import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 html {
   box-sizing: border-box;
@@ -11,5 +12,7 @@ html {
   padding: 0;
 }
 body {
-  background: $red;
+  background: $lightGreen;
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
 }
