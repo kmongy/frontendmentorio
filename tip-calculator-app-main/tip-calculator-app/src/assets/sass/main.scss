@@ -13,6 +13,40 @@ html {
 }
 body {
   background: $lightGreen;
+  color: $darkGreen;
   font-family: 'Space Mono', monospace;
   font-size: 16px;
+}
+.container {
+  background: white;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem 1.75rem;
+}
+.bill-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  label {
+    font-weight: 700;
+    padding: 0.5rem 0;
+  }
+
+  .bill-total {
+    border: none;
+    border-radius: 0.25rem;
+    background: $lightGreyGreen;
+    color: $deepGreen;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .dollar-sign {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+  }
 }
