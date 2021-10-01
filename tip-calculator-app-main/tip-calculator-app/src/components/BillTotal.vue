@@ -7,12 +7,15 @@
     </div>
 
     <div class="tip-selection-container">
-      <button class="tip-5-percent">5%</button>
-      <button class="tip-10-percent">10%</button>
-      <button class="tip-15-percent">15%</button>
-      <button class="tip-25-percent">25%</button>
-      <button class="tip-50-percent">50%</button>
-      <button class="tip-custom-percent">Custom</button>
+      <p>Select Tip %</p>
+      <div class="tip-buttons-container">
+        <button class="tip-5-percent">5%</button>
+        <button class="tip-10-percent">10%</button>
+        <button class="tip-15-percent">15%</button>
+        <button class="tip-25-percent">25%</button>
+        <button class="tip-50-percent">50%</button>
+        <button class="tip-custom-percent">Custom</button>
+      </div>
     </div>
 
     <div class="number-of-people-container">

@@ -50,3 +50,37 @@ body {
     bottom: 1rem;
   }
 }
+.tip-selection-container {
+  padding: 1rem 0;
+  p {
+    font-weight: 700;
+    padding: 0.5rem 0;
+  }
+}
+.tip-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 1rem;
+
+  button {
+    background: $deepGreen;
+    border: none;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
+
+    &:focus,
+    &:hover {
+      background: $boldGreen;
+      color: $deepGreen;
+    }
+  }
+
+  .tip-custom-percent {
+    background: $lightGreyGreen;
+    color: $darkGreen;
+  }
+}
