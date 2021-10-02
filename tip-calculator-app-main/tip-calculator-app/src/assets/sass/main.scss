@@ -22,6 +22,10 @@ body {
   border-radius: 1rem 1rem 0 0;
   padding: 1.5rem 1.75rem;
 }
+.logo {
+  display: block;
+  margin: 2rem auto;
+}
 .bill-input,
 .number-of-people-container {
   display: flex;
@@ -54,7 +58,7 @@ body {
   }
 }
 .tip-selection-container {
-  padding: 1rem 0 1.5rem 0;
+  padding: 1rem 0;
   p {
     font-weight: 700;
     padding: 0.5rem 0;
@@ -69,7 +73,7 @@ body {
     background: $deepGreen;
     border: none;
     border-radius: 0.25rem;
-    color: #fff;
+    color: $lightGreyGreen;
     font-family: inherit;
     font-size: 1.2rem;
     font-weight: 700;
@@ -85,5 +89,53 @@ body {
   .tip-custom-percent {
     background: $lightGreyGreen;
     color: $darkGreen;
+  }
+}
+.total-dashboard {
+  background: $deepGreen;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-top: 2rem;
+
+  .tip-amount-person-container,
+  .amount-total-person-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left-label {
+      display: flex;
+      flex-direction: column;
+
+      .amount-label {
+        color: $lightGreyGreen;
+      }
+
+      .sub-heading {
+        color: $darkGreen;
+        font-size: 0.8rem;
+      }
+    }
+
+    .amount-per-person-total {
+      color: $boldGreen;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0.5rem 0;
+    }
+  }
+  .reset {
+    background: $boldGreen;
+    border: none;
+    border-radius: 0.25rem;
+    color: $deepGreen;
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    margin: 1.5rem 0 1rem 0;
+    width: 100%;
+    cursor: pointer;
   }
 }

@@ -46,17 +46,17 @@
 
     <div class="total-dashboard">
       <div class="tip-amount-person-container">
-        <div class="left-lable">
-          <div class="tip-amount">Tip Amount</div>
-          <p>/ person</p>
+        <div class="left-label">
+          <p class="tip-amount amount-label">Tip Amount</p>
+          <p class="sub-heading">/ person</p>
         </div>
         <div class="amount-per-person-total">$4.27</div>
       </div>
 
       <div class="amount-total-person-container">
-        <div class="left-lable">
-          <div class="total-amount-per-person">Total</div>
-          <p>/ person</p>
+        <div class="left-label">
+          <p class="total-amount-per-person amount-label">Total</p>
+          <p class="sub-heading">/ person</p>
         </div>
         <div class="amount-per-person-total">$32.79</div>
       </div>
