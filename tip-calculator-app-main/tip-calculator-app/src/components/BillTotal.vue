@@ -2,7 +2,7 @@
   <div class="container">
     <div class="bill-input">
       <label for="bill-total">Bill</label>
-      <input type="text" class="bill-total" />
+      <input type="text" class="bill-total" v-model="test"/>
       <svg
         class="dollar-sign"
         xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@
         <button class="tip-15-percent">15%</button>
         <button class="tip-25-percent">25%</button>
         <button class="tip-50-percent">50%</button>
-        <button class="tip-custom-percent">Custom</button>
+        <input class="tip-custom-percent" type="text" placeholder="Custom">
       </div>
     </div>
 
